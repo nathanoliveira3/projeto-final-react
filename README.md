@@ -2,8 +2,8 @@
 Projeto final da disciplina desenvolvimento web - Utilizando o framework React
 
 ##CLIENTE
--[] Home
--[] Cadastro
+- [] Home
+- [] Cadastro
 	- Endereco (CEP, rua, bairro, cidade, numero, complemento, estados) – Utilizar api viacep
 	- Dados (email, username, senha, nome, cpf, telefone, nascimento
 -[] Login
