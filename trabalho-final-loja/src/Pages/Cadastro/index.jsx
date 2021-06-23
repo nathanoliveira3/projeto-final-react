@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import http from '../../http'
+import Titulo from "../../Components/Titulo"
+
 const Cadastro = () => {
     const [nome, setNome] = useState('Fulano')
     const [usuario, setUsuario] = useState('fulano22')
@@ -64,7 +66,9 @@ const Cadastro = () => {
     return (
         <form onSubmit={salvar} className='col-6 mx-auto'>
 
-            <h1 className="text-center my-5">Cadastro Usuário</h1>
+            <Titulo>
+                Cadastro do Usuário
+            </Titulo>
 
             <div className="mb-3">
                 <label className="form-label">Nome</label>
