@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { useState } from 'react';
 
 import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Cadastro from './Pages/Cadastro'
 
 import Navbar from './Components/Navbar';
 import Cadastro from './Pages/Cadastro'
