@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+E:\OneDrive\Cursos\SerraTec\7. Desenvolvimento Web\Projeto Final\projeto_final-react\trabalho-final-loja\.metadata\.plugins\org.eclipse.jdt.core
+2290215115.index

@@ -26,18 +26,18 @@ const Login = ({aoLogin}) => {
                 console.log(response.data)
                 localStorage.setItem('token', response.data.access_token)
                 aoLogin(response.data.user, response.data.access_token)
-                history.push('/')
+                // history.push('/')
             })
             .catch(erro => {
-                console.log('Algo deu errado')
-                if (erro.response.data && erro.response.data.message) {
-                    setMensagem(erro.response.data.message)
-                  } else {
-                    setMensagem('OPS... um erro não esperado.')
-                  }
-                  setTimeout(() => {
-                    setMensagem('')
-                  }, 4500);
+                console.log(erro)
+                // if (erro.response.data && erro.response.data.message) {
+                //     setMensagem(erro.response.data.message)
+                //   } else {
+                //     setMensagem('OPS... um erro não esperado.')
+                //   }
+                //   setTimeout(() => {
+                //     setMensagem('')
+                //   }, 4500);
             })
 
         setUsername('')
@@ -57,7 +57,7 @@ const Login = ({aoLogin}) => {
                 <input required value={username} onChange={e => setUsername(e.target.value)} type="text" />
                 <label>Senha</label>
                 <input required value={senha} onChange={e => setSenha(e.target.value)} type="password" />
-
+                <button>Entrar</button>
             </form>
 
         </>
