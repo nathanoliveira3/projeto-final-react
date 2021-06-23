@@ -16,12 +16,12 @@ const Produtos = () => {
 
     const enviarCarrinho = (codigo) => {
         const carrinho = {
-            user: localStorage.getItem('user'),
+            usuario: localStorage.getItem('user'),
             codigoProduto: codigo,
             quantidade: 1
         }
         http.put('carrinho', carrinho)
-        .then(response => console.log(response))
+        .then(response => console.log(response.data))
     }
 
     return (
