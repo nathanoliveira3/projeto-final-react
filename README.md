@@ -2,6 +2,7 @@
 Projeto final da disciplina desenvolvimento web - Utilizando o framework React
 
 ## CLIENTE
+- [ ] Navbar
 - [ ] Home
 - [ ] Cadastro
 	- Endereco (CEP, rua, bairro, cidade, numero, complemento, estados) – Utilizar api viacep
@@ -13,8 +14,9 @@ Projeto final da disciplina desenvolvimento web - Utilizando o framework React
 - [ ] Carrinho
 	- Produtos, quantidade e preço
 	- api para adicionar, remover e alterar quantidade
+- [ ] Rodape
 
-## ADMIN
+## ADMIN (não será necessário fazer)
 - [ ] Login
 	- email e senha (precisamos criar outra api?)
 - [ ] Produtos
