@@ -14,10 +14,20 @@ const Produtos = () => {
         })
     }, [])
 
+    const enviarCarrinho = (codigo) => {
+        const carrinho = {
+            user: localStorage.getItem('user'),
+            codigoProduto: codigo,
+            quantidade: 1
+        }
+        http.put('carrinho', carrinho)
+        .then(response => console.log(response))
+    }
+
     return (
         <div>
             {produtos.map((produto, index) => {
-              return  <Card key={index} nome={produto.nome} preco={produto.preco} /> 
+              return  <Card key={index} nome={produto.nome} preco={produto.preco} id={produto.id} codigo={produto.codigo} enviar={enviarCarrinho} /> 
             })}
         </div>   
     )

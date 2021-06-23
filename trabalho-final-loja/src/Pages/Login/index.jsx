@@ -27,7 +27,8 @@ const Login = ({ aoLogin }) => {
             .then(response => {
                 console.log(response.data)
                 localStorage.setItem('token', response.data.token)
-                aoLogin(response.data.token)
+                localStorage.setItem('user', response.data.user)
+                aoLogin(response.data.user, response.data.token)
                 history.push('/')
             })
             .catch(erro => {

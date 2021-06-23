@@ -8,7 +8,7 @@ import Navbar from './Components/Navbar'
 import Login from './Pages/Login'
 import Produtos from './Pages/Produtos';
 import Home from './Pages/Home'
-
+import Produto from './Pages/Produto'
 function App() {
 
   const [token, setToken] = useState('');
@@ -38,6 +38,9 @@ function App() {
             </Route>
             <Route exact path="/produtos">
               <Produtos />
+            </Route>            
+            <Route path="/produtos/:id">
+              <Produto />
             </Route>
             <Route>
               <Page404 />
