@@ -1,12 +1,17 @@
-import styled from 'styled-components'
+import './estilos.css'
+const Card = (props) => {
 
-const Card = styled.section`
-  background-color: white;
-  padding: 8px;
-  box-shadow: 0 2px 2px black;
-  border-radius: 5px;
-  margin-bottom: 8px;
-  text-align: center;
-`;
+  return (
+    <div className="card">
+      <img src="..." className="card-img-top" />
+      <div className="card-body  d-flex flex-column">
+        <h5 className="card-title text-center">{props.nome}</h5>        
+        <h5 className="card-title text-center">R${props.preco}</h5>
+        <a href="#" className="btn btn-primary">Comprar</a>
+      </div>
+    </div>
+  )
+
+}
 
 export default Card

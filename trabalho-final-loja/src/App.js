@@ -6,6 +6,7 @@ import Footer from './Components/Footer'
 import Page404 from './Pages/Page404'
 import Navbar from './Components/Navbar'
 import Login from './Pages/Login'
+import Produtos from './Pages/Produtos';
 
 function App() {
 
@@ -26,13 +27,16 @@ function App() {
         <div className="container">
           <Switch>
             <Route exact path="/">
-
+            
             </Route>
             <Route exact path="/cadastro">
               <Cadastro />
             </Route>
             <Route exact path="/login">
               <Login aoLogin={aoLogin} />
+            </Route>
+            <Route exact path="/produtos">
+              <Produtos />
             </Route>
             <Route>
               <Page404 />
