@@ -6,6 +6,7 @@ import Footer from './Components/Footer'
 import Page404 from './Pages/Page404'
 import Navbar from './Components/Navbar'
 import Login from './Pages/Login'
+import Home from './Pages/Home'
 
 function App() {
 
@@ -26,7 +27,7 @@ function App() {
         <div className="container">
           <Switch>
             <Route exact path="/">
-
+              <Home />
             </Route>
             <Route exact path="/cadastro">
               <Cadastro />
