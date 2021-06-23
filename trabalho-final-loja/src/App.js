@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Cadastro from './Pages/Cadastro'
 import Footer from './Components/Footer'
 import Page404 from './Pages/Page404'
-import Navbar from './Components/Navbar';
+import Navbar from './Components/Navbar'
 import Login from './Pages/Login'
 
 function App() {
@@ -31,12 +31,12 @@ function App() {
             <Route exact path="/cadastro">
               <Cadastro />
             </Route>
+            <Route exact path="/login">
+              <Login aoLogin={aoLogin} />
+            </Route>
             <Route>
               <Page404 />
-            </Route>
-            <Route>
-              <Login exact path="/login" aoLogin={aoLogin} />
-            </Route>
+            </Route>            
           </Switch>
         </div>
         <Footer />

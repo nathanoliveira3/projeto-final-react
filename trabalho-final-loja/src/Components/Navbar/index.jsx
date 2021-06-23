@@ -30,10 +30,10 @@ const Navbar = ({ token, aoLogout }) => {
         }
         return <>
             <li className="nav-item">
-                <Link className="nav-link" to="/">Login</Link>
+                <Link className="nav-link" to="login">Login</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" to="/">Cadastre-se</Link>
+                <Link className="nav-link" to="cadastro">Cadastre-se</Link>
             </li>
         </>
     }
