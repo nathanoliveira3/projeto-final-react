@@ -6,11 +6,8 @@ import Footer from './Components/Footer'
 import Page404 from './Pages/Page404'
 import Navbar from './Components/Navbar'
 import Login from './Pages/Login'
-<<<<<<< HEAD
 import Produtos from './Pages/Produtos';
-=======
 import Home from './Pages/Home'
->>>>>>> a77ce3dd63ec4ee0474152493cf81d97dd636aa2
 
 function App() {
 

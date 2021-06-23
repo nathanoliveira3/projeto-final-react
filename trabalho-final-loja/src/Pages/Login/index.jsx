@@ -20,26 +20,26 @@ const Login = ({ aoLogin }) => {
     const efetuarLogin = (e) => {
         e.preventDefault()
         const usuario = {
-            username: username,
-            senha: senha
+            user: username,
+            pass: senha
         }
         http.post(`auth`, usuario)
             .then(response => {
                 console.log(response.data)
-                localStorage.setItem('token', response.data.access_token)
-                aoLogin(response.data.user, response.data.access_token)
-                // history.push('/')
+                localStorage.setItem('token', response.data.token)
+                aoLogin(response.data.token)
+                history.push('/')
             })
             .catch(erro => {
                 console.log(erro)
-                // if (erro.response.data && erro.response.data.message) {
-                //     setMensagem(erro.response.data.message)
-                //   } else {
-                //     setMensagem('OPS... um erro não esperado.')
-                //   }
-                //   setTimeout(() => {
-                //     setMensagem('')
-                //   }, 4500);
+                if (erro.response.data && erro.response.data.message) {
+                    setMensagem(erro.response.data.message)
+                } else {
+                    setMensagem('OPS... um erro não esperado.')
+                }
+                setTimeout(() => {
+                    setMensagem('')
+                }, 4500);
             })
 
         setUsername('')
@@ -63,7 +63,7 @@ const Login = ({ aoLogin }) => {
                     <label className="form-label">Senha</label>
                     <input className="form-control mb-4" required value={senha} onChange={e => setSenha(e.target.value)} type="password" />
                 </div>
-                <div className="col-lg-4 col-md-10 col-sm-12 fw-bold d-grid mx-auto"> 
+                <div className="col-lg-4 col-md-10 col-sm-12 fw-bold d-grid mx-auto">
                     <button className="btn btn-dark my-2">Entrar</button>
                     <Link to="/cadastro" className="btn btn-outline-dark my-1 mb-5">Cadastrar</Link>
                 </div>
