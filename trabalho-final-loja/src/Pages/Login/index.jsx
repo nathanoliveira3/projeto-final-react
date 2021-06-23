@@ -3,8 +3,10 @@ import http from '../../http'
 import { useHistory } from "react-router-dom";
 import Titulo from '../../Components/Titulo';
 import MensagemErro from './MensagemErro'
+import { Link } from 'react-router-dom';
 
-const Login = ({aoLogin}) => {
+
+const Login = ({ aoLogin }) => {
 
     const [mensagem, setMensagem] = useState('')
     const [username, setUsername] = useState('')
@@ -45,22 +47,28 @@ const Login = ({aoLogin}) => {
     }
 
     return (
-        <>
+        <div className="mx-auto">
             <Titulo>
                 Login
             </Titulo>
 
-            { mensagem && <MensagemErro msg={mensagem} /> }
+            {mensagem && <MensagemErro msg={mensagem} />}
 
-            <form onSubmit={efetuarLogin}>
-                <label>Username</label>
-                <input required value={username} onChange={e => setUsername(e.target.value)} type="text" />
-                <label>Senha</label>
-                <input required value={senha} onChange={e => setSenha(e.target.value)} type="password" />
-                <button>Entrar</button>
+            <form className="container" onSubmit={efetuarLogin}>
+                <div className="mb-3 col-lg-4 col-md-10 col-sm-12 mx-auto">
+                    <label className="form-label">Username</label>
+                    <input className="form-control" required value={username} onChange={e => setUsername(e.target.value)} type="text" />
+                </div>
+                <div className="mb-3 col-lg-4 col-md-10 col-sm-12 mx-auto">
+                    <label className="form-label">Senha</label>
+                    <input className="form-control mb-4" required value={senha} onChange={e => setSenha(e.target.value)} type="password" />
+                </div>
+                <div className="col-lg-4 col-md-10 col-sm-12 fw-bold d-grid mx-auto"> 
+                    <button className="btn btn-dark my-2">Entrar</button>
+                    <Link to="/cadastro" className="btn btn-outline-dark my-1 mb-5">Cadastrar</Link>
+                </div>
             </form>
-
-        </>
+        </div>
     )
 
 }
