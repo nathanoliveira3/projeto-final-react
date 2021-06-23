@@ -1,20 +1,64 @@
-import { useState } from "react"
-
+import { useEffect, useState } from "react"
+import http from '../../http'
 const Cadastro = () => {
-    const [nome, setNome] = useState('')
-    const [usuario, setUsuario] = useState('')
-    const [email, setEmail] = useState('')
-    const [cpf, setCpf] = useState('')
-    const [telefone, setTelefone] = useState('')
-    const [nascimento, setNascimento] = useState('')
-    const [senha, setSenha] = useState('')
-    const [cep, setCep] = useState('')
-    const [numero, setNumero] = useState('')
-    const [complemento, setComplemento] = useState('')
+    const [nome, setNome] = useState('Fulano')
+    const [usuario, setUsuario] = useState('fulano22')
+    const [email, setEmail] = useState('fulano@gmail.com')
+    const [cpf, setCpf] = useState('55555555555')
+    const [telefone, setTelefone] = useState('22981074659')
+    const [nascimento, setNascimento] = useState('1994/09/03')
+    const [senha, setSenha] = useState('123456')
+    const [cep, setCep] = useState('28623000')
+    const [numero, setNumero] = useState('75')
+    const [complemento, setComplemento] = useState('dgsdgds')
+
+    //const [clientes, setClientes] = useState([])
+
+    /*const obterClientes = () => {
+        http.get('cliente')
+            .then(response => {
+                setClientes(response.data)
+            })
+    }
+
+    useEffect(() => {
+        obterClientes()
+    }, [])*/
+
 
     const salvar = (evento) => {
-        evento.preventeDefault()
-        console.log('nada')
+        evento.preventDefault()
+
+        const novoCliente = {}
+
+        novoCliente.nome = nome
+        novoCliente.usuario = usuario
+        novoCliente.email = email
+        novoCliente.cpf = cpf
+        novoCliente.telefone = telefone
+        novoCliente.dataNascimento = nascimento
+        novoCliente.senha = senha
+        novoCliente.endereco = {}
+        novoCliente.endereco.cep = cep
+        novoCliente.endereco.numero = numero
+        novoCliente.endereco.complemento = complemento        
+
+        http.post('cliente', novoCliente)
+            .then(response => {
+                console.log(response.data)                
+                
+            })
+
+        setNome('')
+        setUsuario('')
+        setEmail('')
+        setCep('')
+        setTelefone('')
+        setNascimento('')
+        setSenha('')
+        setCep('')
+        setNumero('')
+        setComplemento('')
     }
 
     return (
@@ -24,7 +68,7 @@ const Cadastro = () => {
 
             <div className="mb-3">
                 <label className="form-label">Nome</label>
-                <input className="form-control" type="text" value={nome} onChange={(evento) => setNome(evento.target.value)}/>
+                <input className="form-control" type="text" value={nome} onChange={(evento) => setNome(evento.target.value)} />
             </div>
 
             <div className="mb-3">

@@ -1,17 +1,11 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { useState } from 'react';
-
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Cadastro from './Pages/Cadastro'
-
+import Footer from './Components/Footer'
+import Page404 from './Pages/Page404'
 import Navbar from './Components/Navbar';
-import Cadastro from './Pages/Cadastro'
-import Carrinho from './Pages/Carrinho'
-import Home from './Pages/Home'
 import Login from './Pages/Login'
-import Produto from './Pages/Produto'
-import Produtos from './Pages/Produtos'
 
 function App() {
 
@@ -31,29 +25,21 @@ function App() {
         <Navbar token={token} aoLogout={logout} />
         <div className="container">
           <Switch>
-            {/* <Route exact path="/">
-              <Home />
+            <Route exact path="/">
+
             </Route>
-            <Route path="/cadastro">
+            <Route exact path="/cadastro">
               <Cadastro />
             </Route>
-            <Route path="/login">
-              <Login onLogin={aoLogin} />
-            </Route>
-            <Route exact path="/produtos">
-              <Produtos />
-            </Route>
-            <Route path="/produto/:id">
-              <Produto />
-            </Route>
-            <Route path="/carrinho">
-              <Carrinho />
+            <Route>
+              <Page404 />
             </Route>
             <Route>
-              <Pagina404 />
-            </Route> */}
+              <Login exact path="/login" aoLogin={aoLogin} />
+            </Route>
           </Switch>
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );
