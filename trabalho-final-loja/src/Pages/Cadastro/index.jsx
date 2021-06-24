@@ -9,7 +9,7 @@ const Cadastro = () => {
     const [email, setEmail] = useState('fulano@gmail.com')
     const [cpf, setCpf] = useState('55555555555')
     const [telefone, setTelefone] = useState('22981074659')
-    const [nascimento, setNascimento] = useState('1994/09/03')
+    const [nascimento, setNascimento] = useState('1994-09-03')
     const [senha, setSenha] = useState('123456')
     const [cep, setCep] = useState('28623000')
     const [numero, setNumero] = useState('75')

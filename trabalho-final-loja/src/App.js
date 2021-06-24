@@ -10,6 +10,8 @@ import Produtos from './Pages/Produtos';
 import Home from './Pages/Home'
 import Produto from './Pages/Produto'
 import Carrinho from './Pages/Carrinho'
+import ContaDetalhes from './Pages/ContaDetalhes';
+import ContaEdit from './Pages/ContaEdit';
 function App() {
 
   const [token, setToken] = useState('');
@@ -52,6 +54,12 @@ function App() {
             </Route>
             <Route path="/carrinho">
               <Carrinho />
+            </Route>
+            <Route exact path="/conta">
+              <ContaDetalhes />
+            </Route>
+            <Route path="/conta/editar">
+              <ContaEdit />
             </Route>
             <Route>
               <Page404 />

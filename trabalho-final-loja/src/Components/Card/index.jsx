@@ -7,7 +7,7 @@ const Card = (props) => {
 
   return (
     <div className="card">
-      <img src="..." className="card-img-top" />
+      <img src="..." className="card-img-top" alt="card" />
       <div className="card-body  d-flex flex-column">
         <h5 className="card-title text-center">{props.nome}</h5>        
         <h5 className="card-title text-center">{props.preco}</h5>
