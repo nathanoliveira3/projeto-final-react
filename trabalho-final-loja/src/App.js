@@ -56,7 +56,7 @@ function App() {
               <Carrinho />
             </Route>
             <Route exact path="/conta">
-              <ContaDetalhes />
+              <ContaDetalhes aoLogout={logout} />
             </Route>
             <Route path="/conta/editar">
               <ContaEdit />
