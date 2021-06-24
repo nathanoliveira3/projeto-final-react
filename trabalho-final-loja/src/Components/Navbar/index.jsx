@@ -14,13 +14,13 @@ const Navbar = ({ token, aoLogout }) => {
             return (
                 <>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/">Home</Link>
+                        <Link className="nav-link btn btn-link" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/produtos">Produtos</Link>
+                        <Link className="nav-link btn btn-link" to="/produtos">Produtos</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/conta">Conta</Link>
+                        <Link className="nav-link btn btn-link" to="/conta">Conta</Link>
                     </li>                   
                     <li className="nav-item">
                         <button className="nav-link btn btn-link" onClick={logout}>Logout</button>
