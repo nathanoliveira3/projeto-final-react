@@ -6,6 +6,11 @@ const Produtos = () => {
 
     const [produtos, setProdutos] = useState([])
 
+    const formatter = new Intl.NumberFormat('pr-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    })
+
     useEffect(() => {
         http.get('produto')
         .then(response => {
@@ -27,7 +32,7 @@ const Produtos = () => {
     return (
         <div>
             {produtos.map((produto, index) => {
-              return  <Card key={index} nome={produto.nome} preco={produto.preco} id={produto.id} codigo={produto.codigo} enviar={enviarCarrinho} /> 
+              return  <Card key={index} nome={produto.nome} preco={formatter.format(produto.preco)} id={produto.id} codigo={produto.codigo} enviar={enviarCarrinho} /> 
             })}
         </div>   
     )
