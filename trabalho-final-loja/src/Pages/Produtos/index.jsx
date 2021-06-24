@@ -25,7 +25,7 @@ const Produtos = () => {
     }
 
     return (
-        <div>
+        <div className="row">
             {produtos.map((produto, index) => {
               return  <Card key={index} nome={produto.nome} preco={produto.preco} id={produto.id} codigo={produto.codigo} enviar={enviarCarrinho} /> 
             })}

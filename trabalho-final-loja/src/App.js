@@ -10,6 +10,7 @@ import Produtos from './Pages/Produtos';
 import Home from './Pages/Home'
 import Produto from './Pages/Produto'
 import Carrinho from './Pages/Carrinho'
+import Pedidos from './Pages/Pedidos';
 function App() {
 
   const [token, setToken] = useState('');
@@ -20,7 +21,7 @@ function App() {
       setToken(tokenAntigo)
     }
   }, [])
-  
+
   const aoLogin = (token) => {
     setToken(token);
   }
@@ -50,8 +51,11 @@ function App() {
             <Route path="/produtos/:id">
               <Produto />
             </Route>
-            <Route path="/carrinho">
+            <Route path="/carrinho/:id">
               <Carrinho />
+            </Route>
+            <Route path="/pedidos/:id">
+              <Pedidos />
             </Route>
             <Route>
               <Page404 />
