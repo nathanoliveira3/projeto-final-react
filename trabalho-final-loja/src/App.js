@@ -11,13 +11,15 @@ import Home from './Pages/Home'
 import Produto from './Pages/Produto'
 import Carrinho from './Pages/Carrinho'
 import Pedidos from './Pages/Pedidos';
+import ContaDetalhes from './Pages/ContaDetalhes';
+import ContaEdit from './Pages/ContaEdit';
 function App() {
 
   const [token, setToken] = useState('');
 
   useEffect(() => {
     const tokenAntigo = localStorage.getItem('token')
-    if(tokenAntigo){
+    if (tokenAntigo) {
       setToken(tokenAntigo)
     }
   }, [])
@@ -47,7 +49,7 @@ function App() {
             </Route>
             <Route exact path="/produtos">
               <Produtos />
-            </Route>            
+            </Route>
             <Route path="/produtos/:id">
               <Produto />
             </Route>
@@ -57,12 +59,20 @@ function App() {
             <Route path="/pedidos/:id">
               <Pedidos />
             </Route>
+            <Route exact path="/conta">
+              <ContaDetalhes />
+            </Route>
+            <Route path="/conta/editar">
+              <ContaEdit />
+            </Route>
             <Route>
               <Page404 />
-            </Route>            
+            </Route>
+
           </Switch>
+
+          <Footer />
         </div>
-        <Footer />
       </BrowserRouter>
     </div>
   );

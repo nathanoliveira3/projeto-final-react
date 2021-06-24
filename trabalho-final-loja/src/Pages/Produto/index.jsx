@@ -6,6 +6,11 @@ const Produto = () => {
     const { id } = useParams()
     const [produto, setProduto] = useState({})
 
+    const formatter = new Intl.NumberFormat('pr-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    })
+
     useEffect(() => {
         http.get('produto/' + id)
             .then(response => setProduto(response.data))
@@ -22,7 +27,7 @@ const Produto = () => {
                     <div className="card-body">
                         <h5 className="card-title">{produto.nome}</h5>
                         <p className="card-text">{produto.descricao}</p>
-                        <h5 className="card-title">R${produto.preco}</h5>
+                        <h5 className="card-title">{formatter.format(produto.preco)}</h5>
                         <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>

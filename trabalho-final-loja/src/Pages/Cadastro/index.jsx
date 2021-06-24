@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import http from '../../http'
 import Titulo from "../../Components/Titulo"
+import { useHistory } from "react-router"
 
 const Cadastro = () => {
     const [nome, setNome] = useState('Fulano')
@@ -8,7 +9,7 @@ const Cadastro = () => {
     const [email, setEmail] = useState('fulano@gmail.com')
     const [cpf, setCpf] = useState('55555555555')
     const [telefone, setTelefone] = useState('22981074659')
-    const [nascimento, setNascimento] = useState('1994/09/03')
+    const [nascimento, setNascimento] = useState('1994-09-03')
     const [senha, setSenha] = useState('123456')
     const [cep, setCep] = useState('28623000')
     const [numero, setNumero] = useState('75')
@@ -27,6 +28,8 @@ const Cadastro = () => {
         obterClientes()
     }, [])*/
 
+
+    const history = useHistory();
 
     const salvar = (evento) => {
         evento.preventDefault()
@@ -47,14 +50,15 @@ const Cadastro = () => {
 
         http.post('cliente', novoCliente)
             .then(response => {
-                console.log(response.data)                
+                console.log(response.data)
+                history.push('/login')
                 
             })
 
         setNome('')
         setUsuario('')
         setEmail('')
-        setCep('')
+        setCpf('')
         setTelefone('')
         setNascimento('')
         setSenha('')
@@ -102,7 +106,7 @@ const Cadastro = () => {
 
             <div className="mb-5">
                 <label className="form-label">Senha</label>
-                <input className="form-control" type="text" value={senha} onChange={(evento) => setSenha(evento.target.value)} />
+                <input className="form-control" type="password" value={senha} onChange={(evento) => setSenha(evento.target.value)} />
             </div>
 
             <h2 className="text-center">Endereço</h2>
