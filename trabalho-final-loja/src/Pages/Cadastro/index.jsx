@@ -54,7 +54,7 @@ const Cadastro = () => {
         setNome('')
         setUsuario('')
         setEmail('')
-        setCep('')
+        setCpf('')
         setTelefone('')
         setNascimento('')
         setSenha('')
