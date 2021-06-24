@@ -21,10 +21,7 @@ const Navbar = ({ token, aoLogout }) => {
                     </li> 
                     <li className="nav-item">
                         <Link className="nav-link" to={`/carrinho/${localStorage.getItem('idCliente')}`}>Carrinho</Link>
-                    </li>  
-                    <li className="nav-item">                      
-                        <Link className="nav-link btn btn-link" to="/produtos">Produtos</Link>
-                    </li>
+                    </li>                   
                     <li className="nav-item">
                         <Link className="nav-link btn btn-link" to="/conta">Conta</Link>
                     </li>                   
