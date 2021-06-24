@@ -1,6 +1,7 @@
 import { useState } from "react"
 import http from '../../http'
 import Titulo from "../../Components/Titulo"
+import { useHistory } from "react-router"
 
 const Cadastro = () => {
     const [nome, setNome] = useState('Fulano')
@@ -28,6 +29,8 @@ const Cadastro = () => {
     }, [])*/
 
 
+    const history = useHistory();
+
     const salvar = (evento) => {
         evento.preventDefault()
 
@@ -47,7 +50,8 @@ const Cadastro = () => {
 
         http.post('cliente', novoCliente)
             .then(response => {
-                console.log(response.data)                
+                console.log(response.data)
+                history.push('/login')
                 
             })
 
@@ -102,7 +106,7 @@ const Cadastro = () => {
 
             <div className="mb-5">
                 <label className="form-label">Senha</label>
-                <input className="form-control" type="text" value={senha} onChange={(evento) => setSenha(evento.target.value)} />
+                <input className="form-control" type="password" value={senha} onChange={(evento) => setSenha(evento.target.value)} />
             </div>
 
             <h2 className="text-center">Endereço</h2>
