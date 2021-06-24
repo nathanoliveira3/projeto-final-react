@@ -1,5 +1,6 @@
 import Carrossel from "../../Components/Carrossel"
 import CategoriasPopulares from "../../Components/CategoriasPopulares"
+import Confira from "../../Components/Confira"
 import SubTitulo from "../../Components/SubTitulo"
 
 const Home = () => {
@@ -10,7 +11,13 @@ const Home = () => {
                 <Carrossel />
             </section>
 
-            <div className="categorias-populares mt-5">
+            <div className="mt-3">
+
+                <SubTitulo>
+                    Confira
+                </SubTitulo>
+
+                <Confira/>
 
                 <SubTitulo>
                     Categorias Populares
