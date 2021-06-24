@@ -1,0 +1,16 @@
+.card {
+    max-width: 500px;
+}
+.card a {
+    background-color: #212529;
+    border: none;
+}
+.card:hover {
+    box-shadow: 1px 3px 37px -6px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.card a:hover{
+    background-color: #212529;
+    filter: brightness(0.75);
+}
