@@ -1,31 +1,10 @@
-// import { useState, useEffect } from "react";
+import Capim from '../../Imagens/Capim.gif'
+import Capim_canela_store from '../../Imagens/Capim_canela_store.png'
+import Aproveite from '../../Imagens/Aproveite.png'
 
 const Carrossel = () => {
 
-    // const [imagens, setImagens] = useState([]);
-
-    // useEffect(() => {
-
-    //     const imgs = [
-    //         {
-    //             id: 1,
-    //             src: "https://media.istockphoto.com/vectors/propaganda-word-concepts-banner-electioneering-presidential-vector-id1214905060",
-    //             alt: ""
-    //         },
-    //         {
-    //             id: 2,
-    //             src: "https://media.istockphoto.com/vectors/propaganda-word-concepts-banner-electioneering-presidential-vector-id1214905060",
-    //             alt: ""
-    //         },
-    //         {
-    //             id: 3,
-    //             src: "https://media.istockphoto.com/vectors/propaganda-word-concepts-banner-electioneering-presidential-vector-id1214905060",
-    //             alt: ""
-    //         }
-    //     ]
-
-    //     setImagens([...imagens, imgs]);
-    // });
+    
 
     return (
         <div id="carouselIndicators" className="carousel slide" data-bs-ride="carousel">
@@ -35,21 +14,14 @@ const Carrossel = () => {
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" />
             </div>
             <div className="carousel-inner">
-                {/* {imagens.map((imagem, index) => {
-                    return (
-                        <div className="carousel-item active">
-                            <img src={imagem.src} key={index} className="d-block w-100" alt={imagem.alt} />
-                        </div>
-                    );
-                })} */}
                 <div className="carousel-item active">
-                    <img src="https://media.istockphoto.com/vectors/propaganda-word-concepts-banner-electioneering-presidential-vector-id1214905060" className="d-block w-100" alt="..." />
+                    <img src={Capim} className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
-                    <img src="https://media.istockphoto.com/vectors/propaganda-word-concepts-banner-electioneering-presidential-vector-id1214905060" className="d-block w-100" alt="..." />
+                    <img src={Capim_canela_store} className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
-                    <img src="https://media.istockphoto.com/vectors/propaganda-word-concepts-banner-electioneering-presidential-vector-id1214905060" className="d-block w-100" alt="..." />
+                    <img src={Aproveite} className="d-block w-100" alt="..." />
                 </div>
             </div>
 
