@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Cadastro from './Pages/Cadastro'
@@ -14,6 +14,13 @@ function App() {
 
   const [token, setToken] = useState('');
 
+  useEffect(() => {
+    const tokenAntigo = localStorage.getItem('token')
+    if(tokenAntigo){
+      setToken(tokenAntigo)
+    }
+  }, [])
+  
   const aoLogin = (token) => {
     setToken(token);
   }

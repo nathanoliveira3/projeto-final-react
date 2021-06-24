@@ -28,6 +28,7 @@ const Login = ({ aoLogin }) => {
                 console.log(response.data)
                 localStorage.setItem('token', response.data.token)
                 localStorage.setItem('user', response.data.user)
+                localStorage.setItem("idCliente", response.data.idCliente)
                 aoLogin(response.data.user, response.data.token)
                 history.push('/')
             })
