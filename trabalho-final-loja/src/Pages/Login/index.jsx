@@ -49,6 +49,10 @@ const Login = ({ aoLogin }) => {
         setSenha('')
     }
 
+    const recuperarSenha = () => {
+        history.push('/recuperar-senha');
+    }
+
     return (
         <div className="mx-auto">
             <Titulo>
@@ -65,6 +69,7 @@ const Login = ({ aoLogin }) => {
                 <div className="mb-3 col-lg-4 col-md-10 col-sm-12 mx-auto">
                     <label className="form-label">Senha</label>
                     <input className="form-control mb-4" required value={senha} onChange={e => setSenha(e.target.value)} type="password" />
+                    <a href="" onClick={recuperarSenha}>Esqueci minha senha</a>
                 </div>
                 <div className="col-lg-4 col-md-10 col-sm-12 fw-bold d-grid mx-auto">
                     <button className="btn btn-dark my-2">Entrar</button>
