@@ -1,0 +1,15 @@
+.col:hover {
+    background-color: #212529;
+    color: white;
+    cursor: pointer;
+}
+
+.col {
+    height: 100%;
+    padding-top: 12px;
+}
+
+.row {
+    height: 100%;
+
+}

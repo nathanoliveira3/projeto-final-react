@@ -10,7 +10,7 @@ const Home = () => {
                 <Carrossel />
             </section>
 
-            <div className="categorias-populares">
+            <div className="categorias-populares mt-5">
 
                 <SubTitulo>
                     Categorias Populares
