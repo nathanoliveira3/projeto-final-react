@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 const RecuperarSenha = () => {
 
     const [email, setEmail] = useState('');
-    const history = useHistory();
 
     const enviarEmail = (evento) => {
 

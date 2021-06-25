@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import http from '../../http'
 import Card from '../../Components/Card'
-import MensagemErro from '../Login/MensagemErro'
+import MensagemSucesso from '../../Components/MensagemSucesso'
+import Titulo from '../../Components/Titulo'
 
 const Produtos = () => {
 
@@ -27,20 +28,25 @@ const Produtos = () => {
             codigoProduto: codigo,
             quantidade: 1
         }
-        http.put('carrinho', carrinho)
-        .then(
-            setTimeout(() => {
-                setMensagem('')
-            }, 4500)
-        )
+        http.put('carrinho', carrinho)        
+            .then(() => {
+                setMensagem('Produto adicionado ao carrinho!')
+                setTimeout(() => {
+                    setMensagem('')
+                }, 4500)
+            })
+        
     }
 
     return (
+
         <div className="row">
-            {mensagem && <MensagemErro msg={mensagem} />}
+            <Titulo>Produtos</Titulo>
+            {mensagem && <MensagemSucesso msg={mensagem} />}
             {produtos.map((produto, index) => {
-              return  <Card key={index} nome={produto.nome} preco={formatter.format(produto.preco)} id={produto.id} codigo={produto.codigo} enviar={enviarCarrinho} /> 
+              return  <Card key={index} imagem={produto.imagem} nome={produto.nome} preco={formatter.format(produto.preco)} id={produto.id} codigo={produto.codigo} enviar={enviarCarrinho} /> 
             })}
+             
         </div>   
     )
     

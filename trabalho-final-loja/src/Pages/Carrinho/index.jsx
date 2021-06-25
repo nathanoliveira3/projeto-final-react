@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import http from "../../http"
 import MensagemErro from "../Login/MensagemErro"
+import Titulo from '../../Components/Titulo'
 
 const Carrinho = () => {
     const { id } = useParams()
@@ -26,7 +27,7 @@ const Carrinho = () => {
 
     return (
         <div className="col-lg-6 col-md-6 col-sm-10 mx-auto mt-5">
-            
+           <Titulo>Carrinho</Titulo> 
             <div className="card card-pedido pt-0">
                 <div className="card-header">
                     Cliente: {carrinho.cliente}
