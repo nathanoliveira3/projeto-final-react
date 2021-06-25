@@ -6,14 +6,9 @@ import Titulo from '../../Components/Titulo'
 
 const Carrinho = () => {
     const { id } = useParams()
-<<<<<<< HEAD
     const [carrinho, setCarrinho] = useState({ produtos: [] })    
 
 
-=======
-    const [carrinho, setCarrinho] = useState({ produtos: [] })
-    
->>>>>>> 500ca334ae259aa22e6f98183e01884cea27c377
     useEffect(() => {
         http.get('carrinho/' + id)
             .then(response => setCarrinho(response.data))
@@ -47,7 +42,7 @@ const Carrinho = () => {
                 <div className="card-body">
                     <h5 className="card-title">Total - R$ {carrinho.valor}</h5>
                     <ul className="list-group my-5">
-                        {carrinho.produtos.map((item, index) => <li className="list-group-item" key={index}>{item.nome} - R${item.preco} - Quantidade:{localStorage.getItem('quant') } </li>)}
+                        {carrinho.produtos.map((item, index) => <li className="list-group-item" key={index}>{item.nome} - R${item.preco}</li>)}
                     </ul>
                     <select className="form-select mb-4" name="" id="">
                         <option value="">Selecione a forma de pagamento</option>

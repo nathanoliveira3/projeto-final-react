@@ -29,7 +29,7 @@ const Produtos = () => {
             quantidade: quantidade
         }        
 
-        localStorage.setItem('quant', quantidade)
+        
         http.put('carrinho', carrinho)        
             .then(() => {
                 setMensagem('Produto adicionado ao carrinho!')
