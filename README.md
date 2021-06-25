@@ -1,28 +1,39 @@
-# projeto_final-react
-Projeto final da disciplina desenvolvimento web - Utilizando o framework React
+# E-Commerce :shopping_cart:
 
-## CLIENTE
-- [ ] Navbar
-- [ ] Home
-- [ ] Cadastro
-	- Endereco (CEP, rua, bairro, cidade, numero, complemento, estados) – Utilizar api viacep
-	- Dados (email, username, senha, nome, cpf, telefone, nascimento
-- [ ] Login
-	- username e senha (validar token)
-- [ ] Produtos
-	- nome, descrição, categoria, preco, estoque e imagem (puxar do banco o link?)
-- [ ] Carrinho
-	- Produtos, quantidade e preço
-	- api para adicionar, remover e alterar quantidade
-- [ ] Rodape
+### Atender os seguintes requisitos:
 
-## ADMIN (não será necessário fazer)
-- [ ] Login
-	- email e senha (precisamos criar outra api?)
-- [ ] Produtos
-	- Adicionar
-		> nome, preco, descrição, data cadastro e imagem (salvar link ou imagem no banco?)
-	- Remover
-	- Alterar
-	- Listar
+> Todos os itens abaixo devem respeitar as regras atuais da API.
 
+
+
+- [x] Um Cliente poderá se cadastrar livremente.
+
+  
+
+  Após logado o Cliente poderá fazer as seguintes operações:
+
+  - [x] Atualizar seus próprios dados pessoais.
+  - [x] Deletar sua própria conta.
+  - [x] Criar um novo Pedido.
+  - [x] Editar um pedido que não esteja com status de finalizado
+  - [ ] Finalizar um pedido, alterar seu status para finalizado.
+
+### Recursos que devem estar disponíveis sem o usuário estar logado no sistema:
+
+- [x] Visualizar todas as categorias ou uma específica pelo nome.
+- [x] Criar uma nova categoria.
+- [x] Editar uma categoria.
+- [x] Deletar uma categoria.
+- [x] Visualizar todos os produtos ou um específico pelo nome.
+- [x] Criar um novo produto (Com imagem).
+- [x] Editar um produto.
+- [x] Deletar um produto.
+- [ ] Visualizar todos os pedidos.
+- [ ] Excluir algum pedido.
+
+
+
+### <span style="color:red"> **Desafio Extra (Opcional):** </span> 
+
+- [x] Solicitar um e-mail de "Esqueci minha senha".
+- [x] Alterar a senha baseado no e-mail recebido.
