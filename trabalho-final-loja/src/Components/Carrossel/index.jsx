@@ -1,5 +1,5 @@
 import Capim from '../../Imagens/Capim.gif'
-import Capim_Canela_Store from '../../Imagens/Capim_Canela_Store.png'
+import Capim_Canela_Store from '../../Imagens/Capim_canela_store.png'
 import Aproveite from '../../Imagens/Aproveite.png'
 
 const Carrossel = () => {
