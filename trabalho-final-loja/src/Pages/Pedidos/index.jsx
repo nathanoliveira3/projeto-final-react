@@ -5,6 +5,8 @@ import CardPedido from "../../Components/CardPedido"
 import Titulo from "../../Components/Titulo"
 
 
+
+
 const Pedidos = () => {
     const { id } = useParams()
     const [pedidos, setPedidos] = useState([{ produtos: [] }])

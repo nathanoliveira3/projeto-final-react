@@ -7,8 +7,6 @@ const Carrinho = () => {
     const { id } = useParams()
     const [carrinho, setCarrinho] = useState({ produtos: [] })
     
-
-
     useEffect(() => {
         http.get('carrinho/' + id)
             .then(response => setCarrinho(response.data))
@@ -36,7 +34,7 @@ const Carrinho = () => {
                 <div className="card-body">
                     <h5 className="card-title">Total - R$ {carrinho.valor}</h5>
                     <ul className="list-group my-5">
-                        {carrinho.produtos.map((item, index) => <li className="list-group-item" key={index}>{item.nome} - R${item.preco} </li>)}
+                        {carrinho.produtos.map((item, index) => <li className="list-group-item" key={index}>{item.nome} - {item.preco} </li>)}
                     </ul>
                     <div className="row">
                         <a href={`http://localhost:3000/pedidos/${localStorage.getItem('idCliente')}`} className="btn btn-dark col-5 mx-3 " onClick={fecharPedido}>Comprar</a>

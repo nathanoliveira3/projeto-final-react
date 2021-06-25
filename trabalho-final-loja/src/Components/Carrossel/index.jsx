@@ -1,5 +1,5 @@
 import Capim from '../../Imagens/Capim.gif'
-import Capim_Canela_Store from '../../Imagens/Capim_Canela_Store.png'
+import Capim_canela_store from '../../Imagens/Capim_canela_store.png'
 import Aproveite from '../../Imagens/Aproveite.png'
 
 const Carrossel = () => {
@@ -18,7 +18,7 @@ const Carrossel = () => {
                     <img src={Capim} className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
-                    <img src={Capim_Canela_Store} className="d-block w-100" alt="..." />
+                    <img src={Capim_canela_store} className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
                     <img src={Aproveite} className="d-block w-100" alt="..." />
