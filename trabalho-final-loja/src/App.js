@@ -13,6 +13,8 @@ import Carrinho from './Pages/Carrinho'
 import Pedidos from './Pages/Pedidos';
 import ContaDetalhes from './Pages/ContaDetalhes';
 import ContaEdit from './Pages/ContaEdit';
+import RecuperarSenha from './Pages/RecuperarSenha';
+import NovaSenha from './Pages/NovaSenha';
 function App() {
 
   const [token, setToken] = useState('');
@@ -64,6 +66,12 @@ function App() {
             </Route>
             <Route path="/conta/editar">
               <ContaEdit />
+            </Route>
+            <Route path="/recuperar-senha">
+              <RecuperarSenha />
+            </Route>
+            <Route path="/alterar-senha">
+              <NovaSenha />
             </Route>
             <Route>
               <Page404 />
