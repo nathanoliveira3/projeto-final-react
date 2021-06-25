@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useHistory } from "react-router";
 import http from '../../http'
 import Titulo from "../Titulo";
 
@@ -7,6 +8,8 @@ const FormEditDetalhesConta = () => {
     const [email, setEmail] = useState('');
     const [telefone, setTelefone] = useState('');
     const [cliente, setCliente] = useState({});
+
+    const history = useHistory()
 
     useEffect(() => {
         const idCliente = localStorage.getItem('idCliente')
@@ -33,6 +36,8 @@ const FormEditDetalhesConta = () => {
             .then(response => {
                 console.log(response.data);
             })
+        history.push("/conta")
+        window.location.reload()
     }
 
     return (

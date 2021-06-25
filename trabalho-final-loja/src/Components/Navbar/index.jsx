@@ -14,17 +14,20 @@ const Navbar = ({ token, aoLogout }) => {
             return (
                 <>
                     <li className="nav-item">
-                        <Link className="nav-link btn btn-link" to="/">Home</Link>
+                        <Link className="nav-link btn-link" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/produtos">Produtos</Link>
+                        <Link className="nav-link btn-link" to="/produtos">Produtos</Link>
                     </li> 
                     <li className="nav-item">
-                        <Link className="nav-link" to={`/carrinho/${localStorage.getItem('idCliente')}`}>Carrinho</Link>
-                    </li>                   
+                        <Link className="nav-link btn-link" to={`/carrinho/${localStorage.getItem('idCliente')}`}>Carrinho</Link>
+                    </li>
                     <li className="nav-item">
-                        <Link className="nav-link btn btn-link" to="/conta">Conta</Link>
-                    </li>                   
+                        <Link className="nav-link btn-link" to={`/pedidos/${localStorage.getItem('idCliente')}`}>Pedidos</Link>
+                    </li>                     
+                    <li className="nav-item">
+                        <Link className="nav-link btn-link" to="/conta">Conta</Link>
+                    </li>             
                     <li className="nav-item">
                         <button className="nav-link btn btn-link" onClick={logout}>Logout</button>
                     </li>
@@ -33,10 +36,10 @@ const Navbar = ({ token, aoLogout }) => {
         }
         return <>
             <li className="nav-item">
-                <Link className="nav-link" to="login">Login</Link>
+                <Link className="nav-link btn btn-link" to="login">Login</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" to="cadastro">Cadastre-se</Link>
+                <Link className="nav-link btn btn-link" to="cadastro">Cadastre-se</Link>
             </li>
         </>
     }
@@ -52,8 +55,8 @@ const Navbar = ({ token, aoLogout }) => {
                         {Itens()}
                     </ul>
                     <form className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-dark" type="submit">Search</button>
+                        <input className="form-control me-2" type="search" placeholder="Procurar" aria-label="Procurar" />
+                        <button className="btn btn-dark" type="submit">Ir</button>
                     </form>
                 </div>
             </div>

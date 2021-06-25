@@ -6,9 +6,14 @@ import Titulo from '../../Components/Titulo'
 
 const Carrinho = () => {
     const { id } = useParams()
+<<<<<<< HEAD
     const [carrinho, setCarrinho] = useState({ produtos: [] })    
 
 
+=======
+    const [carrinho, setCarrinho] = useState({ produtos: [] })
+    
+>>>>>>> 500ca334ae259aa22e6f98183e01884cea27c377
     useEffect(() => {
         http.get('carrinho/' + id)
             .then(response => setCarrinho(response.data))

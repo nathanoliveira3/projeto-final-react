@@ -2,6 +2,10 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="E:\OneDrive\Cursos\SerraTec\7. Desenvolvimento Web\Projeto Final\projeto_final-react\trabalho-final-loja"/>
+			<item value="E:\OneDrive\Cursos\SerraTec\7. Desenvolvimento Web\Projeto Final\trabalho_final_API_restfull\Loja"/>
+			<item value="E:\OneDrive\Cursos\SerraTec\7. Desenvolvimento Web\Projeto Final\API-Ecommerce-main"/>
+			<item value="E:\OneDrive\Cursos\SerraTec\7. Desenvolvimento Web\Projeto Final\trabalho_final_API_restfull"/>
 			<item value="E:\OneDrive\Cursos\SerraTec\7. Desenvolvimento Web\Projeto Final\residencia-serratec-ecommerce"/>
 		</list>
 		<list key="projectNameTemplate">
