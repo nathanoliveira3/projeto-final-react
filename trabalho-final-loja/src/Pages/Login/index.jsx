@@ -5,7 +5,6 @@ import Titulo from '../../Components/Titulo';
 import MensagemErro from './MensagemErro'
 import { Link } from 'react-router-dom';
 
-
 const Login = ({ aoLogin }) => {
 
     const [mensagem, setMensagem] = useState('')

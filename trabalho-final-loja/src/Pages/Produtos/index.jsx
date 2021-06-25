@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import http from '../../http'
 import Card from '../../Components/Card'
+import MensagemErro from '../Login/MensagemErro'
 
 const Produtos = () => {
 
     const [produtos, setProdutos] = useState([])
+    const [mensagem, setMensagem] = useState('')
 
     const formatter = new Intl.NumberFormat('pr-BR', {
         style: 'currency',
@@ -26,11 +28,16 @@ const Produtos = () => {
             quantidade: 1
         }
         http.put('carrinho', carrinho)
-        .then(response => console.log(response.data))
+        .then(
+            setTimeout(() => {
+                setMensagem('')
+            }, 4500)
+        )
     }
 
     return (
         <div className="row">
+            {mensagem && <MensagemErro msg={mensagem} />}
             {produtos.map((produto, index) => {
               return  <Card key={index} nome={produto.nome} preco={formatter.format(produto.preco)} id={produto.id} codigo={produto.codigo} enviar={enviarCarrinho} /> 
             })}

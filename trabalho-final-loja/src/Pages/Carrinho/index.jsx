@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import http from "../../http"
+import MensagemErro from "../Login/MensagemErro"
 
 const Carrinho = () => {
     const { id } = useParams()
     const [carrinho, setCarrinho] = useState({ produtos: [] })
+    
 
 
     useEffect(() => {
@@ -18,12 +20,15 @@ const Carrinho = () => {
         }
 
         http.post('carrinho/finalizar', finalizar)
-            .then(response => console.log(response.data))
+            .then(
+                
+            )
     }
     console.log(carrinho)
 
     return (
         <div className="col-lg-6 col-md-6 col-sm-10 mx-auto mt-5">
+            
             <div className="card card-pedido pt-0">
                 <div className="card-header">
                     Cliente: {carrinho.cliente}
@@ -35,8 +40,7 @@ const Carrinho = () => {
                     </ul>
                     <div className="row">
                         <a href={`http://localhost:3000/pedidos/${localStorage.getItem('idCliente')}`} className="btn btn-dark col-5 mx-3 " onClick={fecharPedido}>Comprar</a>
-                    </div>                
-
+                    </div>               
                 </div>
             </div>
         </div>
