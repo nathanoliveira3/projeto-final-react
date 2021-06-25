@@ -16,7 +16,7 @@
   - [x] Deletar sua própria conta.
   - [x] Criar um novo Pedido.
   - [x] Editar um pedido que não esteja com status de finalizado
-  - [ ] Finalizar um pedido, alterar seu status para finalizado.
+  - [x] Finalizar um pedido, alterar seu status para finalizado.
 
 ### Recursos que devem estar disponíveis sem o usuário estar logado no sistema:
 
@@ -28,8 +28,8 @@
 - [x] Criar um novo produto (Com imagem).
 - [x] Editar um produto.
 - [x] Deletar um produto.
-- [ ] Visualizar todos os pedidos.
-- [ ] Excluir algum pedido.
+- [x] Visualizar todos os pedidos.
+- [x] Excluir algum pedido.
 
 
 
