@@ -22,12 +22,14 @@ const Produtos = () => {
         })
     }, [])
 
-    const enviarCarrinho = (codigo) => {
+    const enviarCarrinho = (codigo, quantidade) => {
         const carrinho = {
             usuario: localStorage.getItem('user'),
             codigoProduto: codigo,
-            quantidade: 1
-        }
+            quantidade: quantidade
+        }        
+
+        localStorage.setItem('quant', quantidade)
         http.put('carrinho', carrinho)        
             .then(() => {
                 setMensagem('Produto adicionado ao carrinho!')
