@@ -4,16 +4,16 @@ import Titulo from "../../Components/Titulo"
 import { useHistory } from "react-router"
 
 const Cadastro = () => {
-    const [nome, setNome] = useState('Fulano')
-    const [usuario, setUsuario] = useState('fulano22')
-    const [email, setEmail] = useState('fulano@gmail.com')
-    const [cpf, setCpf] = useState('55555555555')
-    const [telefone, setTelefone] = useState('22981074659')
-    const [nascimento, setNascimento] = useState('1994-09-03')
-    const [senha, setSenha] = useState('123456')
-    const [cep, setCep] = useState('28623000')
-    const [numero, setNumero] = useState('75')
-    const [complemento, setComplemento] = useState('dgsdgds')
+    const [nome, setNome] = useState('')
+    const [usuario, setUsuario] = useState('')
+    const [email, setEmail] = useState('')
+    const [cpf, setCpf] = useState('')
+    const [telefone, setTelefone] = useState('')
+    const [nascimento, setNascimento] = useState('')
+    const [senha, setSenha] = useState('')
+    const [cep, setCep] = useState('')
+    const [numero, setNumero] = useState('')
+    const [complemento, setComplemento] = useState('')
 
     //const [clientes, setClientes] = useState([])
 
